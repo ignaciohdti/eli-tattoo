@@ -65,10 +65,10 @@
 </head>
 <body class="antialiased">
 
-    <!-- Navegación con Menú Móvil -->
-    <nav class="fixed w-full z-50 border-b border-safari-sageLight shadow-sm">
+    <!-- Navegación con Menú Móvil Reforzado -->
+    <nav class="fixed w-full z-50">
         <!-- Barra principal superior -->
-        <div class="relative bg-safari-bg/95 backdrop-blur-md z-50">
+        <div class="relative bg-safari-bg/95 backdrop-blur-md z-50 border-b border-safari-sageLight shadow-sm">
             <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
                 <!-- Logo -->
                 <a href="#" class="text-2xl font-wild font-semibold tracking-wide text-safari-text">
@@ -92,8 +92,8 @@
                     </div>
                 </div>
 
-                <!-- Botón de Menú Móvil (Hamburguesa) -->
-                <button id="mobile-menu-button" class="md:hidden text-2xl text-safari-text focus:outline-none">
+                <!-- Botón de Menú Móvil (Área de toque más grande con p-2) -->
+                <button id="mobile-menu-button" class="md:hidden text-2xl text-safari-text focus:outline-none p-3 cursor-pointer">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
@@ -102,8 +102,8 @@
             <div class="h-1 w-full accent-zebra opacity-20"></div>
         </div>
 
-        <!-- Panel de Menú Móvil Desplegable -->
-        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-safari-bg border-b border-safari-sageLight shadow-lg z-40">
+        <!-- Panel de Menú Móvil Desplegable (Forzado con top-full y shadow-2xl) -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-safari-bg border-b border-safari-sageLight shadow-2xl z-40">
             <div class="flex flex-col px-4 py-6 space-y-6 text-center text-safari-text font-medium">
                 <a href="#portafolio" class="mobile-link text-lg hover:text-safari-sage transition">Trabajos Realizados</a>
                 <a href="#flashes" class="mobile-link text-lg hover:text-safari-sage transition">Diseños Disponibles</a>
