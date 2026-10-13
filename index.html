@@ -12,12 +12,12 @@
                 extend: {
                     colors: {
                         safari: {
-                            bg: '#F9F8F4',       /* Crema muy claro / Blanco cálido */
-                            card: '#FFFFFF',     /* Blanco puro para tarjetas */
-                            text: '#2D3748',     /* Gris oscuro para máxima legibilidad */
-                            sage: '#8F9C84',     /* Verde salvia orgánico */
-                            sageLight: '#E3E7DF',/* Salvia muy claro para fondos suaves */
-                            tiger: '#D97736',    /* Naranja tostado sutil */
+                            bg: '#F9F8F4',
+                            card: '#FFFFFF',
+                            text: '#2D3748',
+                            sage: '#8F9C84',
+                            sageLight: '#E3E7DF',
+                            tiger: '#D97736',
                         }
                     },
                     fontFamily: {
@@ -41,7 +41,6 @@
             font-family: 'Inter', sans-serif;
         }
         
-        /* Patrones como acentos decorativos */
         .accent-zebra {
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Crect width='60' height='60' fill='%23ffffff'/%3E%3Cpath d='M-5,10 Q15,20 30,5 T65,10 L65,15 Q45,10 30,25 T-5,30 Z M-5,40 Q15,50 30,35 T65,40 L65,45 Q45,40 30,55 T-5,60 Z' fill='%231a202c'/%3E%3C/svg%3E");
             background-size: 80px;
@@ -52,7 +51,6 @@
             background-size: 60px;
         }
 
-        /* Utilidades para imágenes de galería */
         .gallery-img {
             transition: transform 0.4s ease, box-shadow 0.4s ease;
             cursor: pointer;
@@ -65,79 +63,62 @@
 </head>
 <body class="antialiased">
 
-    <!-- Navegación con Menú Móvil Reforzado -->
-    <nav class="fixed w-full z-50">
-        <!-- Barra principal superior -->
-        <div class="relative bg-safari-bg/95 backdrop-blur-md z-50 border-b border-safari-sageLight shadow-sm">
-            <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-                <!-- Logo -->
-                <a href="#" class="text-2xl font-wild font-semibold tracking-wide text-safari-text">
-                    Eli <span class="text-safari-sage">Tattoo</span>
-                </a>
-                
-                <!-- Menú Escritorio (Oculto en móviles) -->
-                <div class="hidden md:flex space-x-8 text-sm font-medium text-safari-text items-center">
-                    <a href="#portafolio" class="hover:text-safari-sage transition">Trabajos</a>
-                    <a href="#flashes" class="hover:text-safari-sage transition">Diseños</a>
-                    <a href="#estudio" class="hover:text-safari-sage transition">Estudio</a>
-                    <a href="#informacion" class="hover:text-safari-sage transition">Cuidados</a>
-                    <!-- Redes Sociales -->
-                    <div class="flex space-x-4 pl-4 border-l border-gray-300 text-xl">
-                        <a href="https://instagram.com/eli__.tattoo?mdxt=MXFpbWFxNnJkZDJxag%3D%3D" target="_blank" class="hover:text-safari-tiger transition">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                        <a href="https://www.tiktok.com/@eli__.tattoo?_r=1&_t=ZS-9AWsE1wULmm" target="_blank" class="hover:text-safari-tiger transition">
-                            <i class="fa-brands fa-tiktok"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Botón de Menú Móvil (Área de toque más grande con p-2) -->
-                <button id="mobile-menu-button" class="md:hidden text-2xl text-safari-text focus:outline-none p-3 cursor-pointer">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-            </div>
+    <!-- Navegación con Menú Móvil -->
+    <nav class="fixed w-full z-50 bg-safari-bg/95 backdrop-blur-md border-b border-safari-sageLight shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-wild font-semibold tracking-wide text-safari-text relative z-50">
+                Eli <span class="text-safari-sage">Tattoo</span>
+            </a>
             
-            <!-- Cinta decorativa sutil de cebra en la navegación -->
-            <div class="h-1 w-full accent-zebra opacity-20"></div>
-        </div>
+            <!-- Menú Escritorio -->
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-safari-text items-center relative z-50">
+                <a href="#portafolio" class="hover:text-safari-sage transition">Trabajos</a>
+                <a href="#flashes" class="hover:text-safari-sage transition">Diseños</a>
+                <a href="#estudio" class="hover:text-safari-sage transition">Estudio</a>
+                <a href="#informacion" class="hover:text-safari-sage transition">Cuidados</a>
+                <div class="flex space-x-4 pl-4 border-l border-gray-300 text-xl">
+                    <a href="https://instagram.com/eli__.tattoo?mdxt=MXFpbWFxNnJkZDJxag%3D%3D" target="_blank" class="hover:text-safari-tiger transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@eli__.tattoo?_r=1&_t=ZS-9AWsE1wULmm" target="_blank" class="hover:text-safari-tiger transition"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
 
-        <!-- Panel de Menú Móvil Desplegable (Forzado con top-full y shadow-2xl) -->
-        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-safari-bg border-b border-safari-sageLight shadow-2xl z-40">
-            <div class="flex flex-col px-4 py-6 space-y-6 text-center text-safari-text font-medium">
-                <a href="#portafolio" class="mobile-link text-lg hover:text-safari-sage transition">Trabajos Realizados</a>
-                <a href="#flashes" class="mobile-link text-lg hover:text-safari-sage transition">Diseños Disponibles</a>
-                <a href="#estudio" class="mobile-link text-lg hover:text-safari-sage transition">El Estudio</a>
-                <a href="#informacion" class="mobile-link text-lg hover:text-safari-sage transition">Cuidados y Políticas</a>
+            <!-- Botón de Menú Móvil -->
+            <button onclick="toggleMenu()" class="md:hidden text-3xl text-safari-text focus:outline-none p-2 cursor-pointer relative z-50">
+                <i id="menu-icon" class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Cinta decorativa -->
+        <div class="h-1 w-full accent-zebra opacity-20 relative z-50"></div>
+
+        <!-- Panel Desplegable Móvil -->
+        <div id="mobile-menu" class="hidden fixed top-[75px] left-0 w-full bg-safari-bg border-b border-safari-sageLight shadow-2xl z-40 pb-6">
+            <div class="flex flex-col px-4 pt-6 pb-2 space-y-6 text-center text-safari-text font-medium">
+                <a href="#portafolio" onclick="toggleMenu()" class="text-lg hover:text-safari-sage transition">Trabajos Realizados</a>
+                <a href="#flashes" onclick="toggleMenu()" class="text-lg hover:text-safari-sage transition">Diseños Disponibles</a>
+                <a href="#estudio" onclick="toggleMenu()" class="text-lg hover:text-safari-sage transition">El Estudio</a>
+                <a href="#informacion" onclick="toggleMenu()" class="text-lg hover:text-safari-sage transition">Cuidados y Políticas</a>
                 
                 <div class="flex justify-center space-x-8 pt-4 border-t border-gray-200 text-2xl">
-                    <a href="https://instagram.com/eli__.tattoo?mdxt=MXFpbWFxNnJkZDJxag%3D%3D" target="_blank" class="hover:text-safari-tiger transition">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="https://www.tiktok.com/@eli__.tattoo?_r=1&_t=ZS-9AWsE1wULmm" target="_blank" class="hover:text-safari-tiger transition">
-                        <i class="fa-brands fa-tiktok"></i>
-                    </a>
+                    <a href="https://instagram.com/eli__.tattoo?mdxt=MXFpbWFxNnJkZDJxag%3D%3D" target="_blank" class="hover:text-safari-tiger transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@eli__.tattoo?_r=1&_t=ZS-9AWsE1wULmm" target="_blank" class="hover:text-safari-tiger transition"><i class="fa-brands fa-tiktok"></i></a>
                 </div>
             </div>
         </div>
     </nav>
 
     <header class="pt-36 pb-20 px-4 text-center bg-white relative overflow-hidden">
-        <!-- Manchas abstractas claras de fondo -->
         <div class="absolute top-10 left-10 w-64 h-64 bg-safari-sageLight rounded-full filter blur-[60px] opacity-60"></div>
         <div class="absolute bottom-0 right-10 w-72 h-72 bg-[#FDEFD8] rounded-full filter blur-[80px] opacity-50"></div>
 
         <div class="max-w-3xl mx-auto relative z-10">
-            <!-- Foto de perfil con borde sutil -->
             <div class="relative w-40 h-40 mx-auto mb-6">
-                <!-- Acento orgánico decorativo detrás de la foto -->
                 <div class="absolute -inset-2 bg-safari-sageLight rounded-full transform -rotate-6"></div>
                 <img src="tu_foto_de_perfil.jfif" alt="Eli Tattoo" class="relative w-40 h-40 rounded-full object-cover border-4 border-white shadow-lg">
             </div>
             
-            <h1 class="text-5xl md:text-6xl font-wild text-safari-text mb-4">
-                Eli Tattoo
-            </h1>
+            <h1 class="text-5xl md:text-6xl font-wild text-safari-text mb-4">Eli Tattoo</h1>
             <p class="text-safari-sage font-medium mb-8 text-lg tracking-wide uppercase">Puntillismo • Linea Fina • Relleno</p>
             
             <div class="flex flex-col sm:flex-row justify-center gap-4">
@@ -158,7 +139,6 @@
                 <h2 class="text-4xl font-wild mt-2 text-safari-text">Trabajos Realizados</h2>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                <!-- Imágenes del Portafolio con marcos blancos -->
                 <div class="bg-white p-2 rounded-xl shadow-sm"><img src="Tatto_01.jfif" alt="Tatuaje 1" class="gallery-img rounded-lg object-cover w-full h-72"></div>
                 <div class="bg-white p-2 rounded-xl shadow-sm"><img src="Tatto_02.jfif" alt="Tatuaje 2" class="gallery-img rounded-lg object-cover w-full h-72"></div>
                 <div class="bg-white p-2 rounded-xl shadow-sm"><img src="Tatto_03.jfif" alt="Tatuaje 3" class="gallery-img rounded-lg object-cover w-full h-72"></div>
@@ -174,7 +154,6 @@
         </div>
     </section>
 
-    <!-- Cinta de Tigre sutil -->
     <div class="w-full h-2 accent-tiger opacity-30"></div>
 
     <section id="flashes" class="py-20 bg-white">
@@ -185,54 +164,37 @@
                 <p class="text-gray-500 mt-3 font-light">Piezas únicas listas para tu piel. No se repiten.</p>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <!-- Tarjetas con acento de cebra detrás -->
                 <div class="relative group">
-                    <div class="absolute inset-0 accent-zebra rounded-xl transform translate-x-2 translate-y-2 opacity-10 transition-transform group-hover:translate-x-3 group-hover:translate-y-3"></div>
-                    <div class="relative bg-safari-bg p-3 border border-gray-100 rounded-xl">
-                        <img src="flash_01.jfif" alt="Flash 1" class="rounded-lg w-full">
-                    </div>
+                    <div class="absolute inset-0 accent-zebra rounded-xl transform translate-x-2 translate-y-2 opacity-10"></div>
+                    <div class="relative bg-safari-bg p-3 border border-gray-100 rounded-xl"><img src="flash_01.jfif" alt="Flash 1" class="rounded-lg w-full"></div>
                 </div>
                 <div class="relative group">
-                    <div class="absolute inset-0 accent-zebra rounded-xl transform translate-x-2 translate-y-2 opacity-10 transition-transform group-hover:translate-x-3 group-hover:translate-y-3"></div>
-                    <div class="relative bg-safari-bg p-3 border border-gray-100 rounded-xl">
-                        <img src="flash_02.jfif" alt="Flash 2" class="rounded-lg w-full">
-                    </div>
+                    <div class="absolute inset-0 accent-zebra rounded-xl transform translate-x-2 translate-y-2 opacity-10"></div>
+                    <div class="relative bg-safari-bg p-3 border border-gray-100 rounded-xl"><img src="flash_02.jfif" alt="Flash 2" class="rounded-lg w-full"></div>
                 </div>
                 <div class="relative group">
-                    <div class="absolute inset-0 accent-zebra rounded-xl transform translate-x-2 translate-y-2 opacity-10 transition-transform group-hover:translate-x-3 group-hover:translate-y-3"></div>
-                    <div class="relative bg-safari-bg p-3 border border-gray-100 rounded-xl">
-                        <img src="flash_03.jfif" alt="Flash 3" class="rounded-lg w-full">
-                    </div>
+                    <div class="absolute inset-0 accent-zebra rounded-xl transform translate-x-2 translate-y-2 opacity-10"></div>
+                    <div class="relative bg-safari-bg p-3 border border-gray-100 rounded-xl"><img src="flash_03.jfif" alt="Flash 3" class="rounded-lg w-full"></div>
                 </div>
                 <div class="relative group">
-                    <div class="absolute inset-0 accent-zebra rounded-xl transform translate-x-2 translate-y-2 opacity-10 transition-transform group-hover:translate-x-3 group-hover:translate-y-3"></div>
-                    <div class="relative bg-safari-bg p-3 border border-gray-100 rounded-xl">
-                        <img src="flash_04.jfif" alt="Flash 4" class="rounded-lg w-full">
-                    </div>
+                    <div class="absolute inset-0 accent-zebra rounded-xl transform translate-x-2 translate-y-2 opacity-10"></div>
+                    <div class="relative bg-safari-bg p-3 border border-gray-100 rounded-xl"><img src="flash_04.jfif" alt="Flash 4" class="rounded-lg w-full"></div>
                 </div>
                 <div class="relative group">
-                    <div class="absolute inset-0 accent-zebra rounded-xl transform translate-x-2 translate-y-2 opacity-10 transition-transform group-hover:translate-x-3 group-hover:translate-y-3"></div>
-                    <div class="relative bg-safari-bg p-3 border border-gray-100 rounded-xl">
-                        <img src="flash_05.jfif" alt="Flash 5" class="rounded-lg w-full">
-                    </div>
+                    <div class="absolute inset-0 accent-zebra rounded-xl transform translate-x-2 translate-y-2 opacity-10"></div>
+                    <div class="relative bg-safari-bg p-3 border border-gray-100 rounded-xl"><img src="flash_05.jfif" alt="Flash 5" class="rounded-lg w-full"></div>
                 </div>
                 <div class="relative group">
-                    <div class="absolute inset-0 accent-zebra rounded-xl transform translate-x-2 translate-y-2 opacity-10 transition-transform group-hover:translate-x-3 group-hover:translate-y-3"></div>
-                    <div class="relative bg-safari-bg p-3 border border-gray-100 rounded-xl">
-                        <img src="flash_06.jfif" alt="Flash 6" class="rounded-lg w-full">
-                    </div>
+                    <div class="absolute inset-0 accent-zebra rounded-xl transform translate-x-2 translate-y-2 opacity-10"></div>
+                    <div class="relative bg-safari-bg p-3 border border-gray-100 rounded-xl"><img src="flash_06.jfif" alt="Flash 6" class="rounded-lg w-full"></div>
                 </div>
                 <div class="relative group">
-                    <div class="absolute inset-0 accent-zebra rounded-xl transform translate-x-2 translate-y-2 opacity-10 transition-transform group-hover:translate-x-3 group-hover:translate-y-3"></div>
-                    <div class="relative bg-safari-bg p-3 border border-gray-100 rounded-xl">
-                        <img src="flash_07.jfif" alt="Flash 7" class="rounded-lg w-full">
-                    </div>
+                    <div class="absolute inset-0 accent-zebra rounded-xl transform translate-x-2 translate-y-2 opacity-10"></div>
+                    <div class="relative bg-safari-bg p-3 border border-gray-100 rounded-xl"><img src="flash_07.jfif" alt="Flash 7" class="rounded-lg w-full"></div>
                 </div>
                 <div class="relative group">
-                    <div class="absolute inset-0 accent-zebra rounded-xl transform translate-x-2 translate-y-2 opacity-10 transition-transform group-hover:translate-x-3 group-hover:translate-y-3"></div>
-                    <div class="relative bg-safari-bg p-3 border border-gray-100 rounded-xl">
-                        <img src="flash_08.jfif" alt="Flash 8" class="rounded-lg w-full">
-                    </div>
+                    <div class="absolute inset-0 accent-zebra rounded-xl transform translate-x-2 translate-y-2 opacity-10"></div>
+                    <div class="relative bg-safari-bg p-3 border border-gray-100 rounded-xl"><img src="flash_08.jfif" alt="Flash 8" class="rounded-lg w-full"></div>
                 </div>
             </div>
         </div>
@@ -242,7 +204,6 @@
         <div class="max-w-6xl mx-auto px-4 text-center">
             <span class="text-safari-tiger text-sm font-bold tracking-widest uppercase">Espacio Seguro</span>
             <h2 class="text-4xl font-wild mt-2 text-safari-text mb-10">El Estudio</h2>
-            
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <img src="Est_01.jfif" alt="Estudio 1" class="rounded-2xl object-cover w-full h-64 shadow-sm">
                 <img src="Est_02.jfif" alt="Estudio 2" class="rounded-2xl object-cover w-full h-64 shadow-sm">
@@ -251,17 +212,12 @@
         </div>
     </section>
 
-    <!-- Cinta de Cebra sutil -->
     <div class="w-full h-3 accent-zebra opacity-10 border-y border-gray-200"></div>
 
     <section id="informacion" class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-4">
-            
             <div class="grid lg:grid-cols-2 gap-16">
-                <!-- Columna Izquierda: Antes de la cita y Políticas -->
                 <div class="space-y-12">
-                    
-                    <!-- Antes de tu cita -->
                     <div>
                         <h3 class="text-2xl font-wild text-safari-text mb-6 flex items-center">
                             <i class="fa-solid fa-leaf text-safari-sage mr-3"></i> Antes de tu Cita
@@ -275,7 +231,6 @@
                         </ul>
                     </div>
 
-                    <!-- Ubicación y Políticas -->
                     <div id="ubicacion">
                         <h3 class="text-2xl font-wild text-safari-text mb-6 flex items-center">
                             <i class="fa-solid fa-location-dot text-safari-tiger mr-3"></i> Ubicación y Políticas
@@ -284,7 +239,6 @@
                             <p><strong><i class="fa-regular fa-clock text-gray-500 mr-1"></i> Tiempos de espera:</strong> Puede variar según qué tan lleno esté el estudio, con un máximo de 30 min de tolerancia.</p>
                             <p><strong><i class="fa-solid fa-ban text-gray-500 mr-1"></i> Cancelaciones:</strong> El anticipo no es reembolsable. Para reagendar será necesario realizar un nuevo anticipo. Avisar con anticipación.</p>
                             <p><strong><i class="fa-solid fa-file-signature text-gray-500 mr-1"></i> Términos:</strong> Diseño, tamaño y ubicación se revisan antes. Cambios que aumenten el trabajo modifican el precio. Si la piel no está en condiciones, se pospondrá.</p>
-                            
                             <div class="mt-6 pt-4 border-t border-gray-200">
                                 <a href="https://maps.app.goo.gl/Jtzq4EHxxG9RdB958?g_st=ac" target="_blank" class="flex items-center justify-center w-full bg-safari-text text-white py-3 rounded-xl hover:bg-safari-tiger transition font-medium">
                                     <i class="fa-solid fa-map-location-dot mr-2"></i> Abrir en Google Maps
@@ -292,15 +246,12 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
 
-                <!-- Columna Derecha: Cuidados -->
                 <div>
                     <h3 class="text-2xl font-wild text-safari-text mb-6 flex items-center">
                         <i class="fa-solid fa-droplet text-safari-sage mr-3"></i> Cuidados del Tatuaje
                     </h3>
-                    
                     <div class="space-y-6">
                         <div class="flex items-start bg-safari-bg p-4 rounded-xl border border-safari-sageLight">
                             <div class="bg-safari-sage text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4 shrink-0 shadow-sm">1</div>
@@ -319,7 +270,6 @@
                             <p class="text-safari-text pt-1">A partir del <strong>tercer día</strong>, después de lavar y secar, coloca una capa fina de pomada. Repite de 2 a 3 veces al día, mínimo por dos semanas.</p>
                         </div>
                         
-                        <!-- Caja de Evitar -->
                         <div class="bg-[#FFF5F5] border border-[#FED7D7] p-6 rounded-2xl mt-8">
                             <h4 class="text-red-500 font-bold mb-4 flex items-center"><i class="fa-solid fa-triangle-exclamation mr-2"></i> Evita estrictamente:</h4>
                             <ul class="space-y-3 text-safari-text text-sm">
@@ -331,44 +281,35 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
     <footer class="bg-safari-bg border-t border-safari-sageLight py-10 text-center">
-        <h2 class="text-2xl font-wild text-safari-text mb-4">
-            Eli <span class="text-safari-sage">Tattoo</span>
-        </h2>
+        <h2 class="text-2xl font-wild text-safari-text mb-4">Eli <span class="text-safari-sage">Tattoo</span></h2>
         <div class="flex justify-center space-x-6 mb-6 text-2xl">
-            <a href="https://instagram.com/eli__.tattoo?mdxt=MXFpbWFxNnJkZDJxag%3D%3D" target="_blank" class="text-gray-400 hover:text-safari-text transition">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://www.tiktok.com/@eli__.tattoo?_r=1&_t=ZS-9AWsE1wULmm" target="_blank" class="text-gray-400 hover:text-safari-text transition">
-                <i class="fa-brands fa-tiktok"></i>
-            </a>
+            <a href="https://instagram.com/eli__.tattoo?mdxt=MXFpbWFxNnJkZDJxag%3D%3D" target="_blank" class="text-gray-400 hover:text-safari-text transition"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@eli__.tattoo?_r=1&_t=ZS-9AWsE1wULmm" target="_blank" class="text-gray-400 hover:text-safari-text transition"><i class="fa-brands fa-tiktok"></i></a>
         </div>
         <p class="text-gray-500 text-sm">© 2026 Eli Tattoo. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- Script para controlar el Menú Móvil -->
+    <!-- Script Mejorado -->
     <script>
-        const btn = document.getElementById('mobile-menu-button');
-        const menu = document.getElementById('mobile-menu');
-        const icon = btn.querySelector('i');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-
-        // Función para abrir/cerrar menú
         function toggleMenu() {
-            menu.classList.toggle('hidden');
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
             
-            // Cambiar icono entre Hamburguesa (bars) y Cerrar (xmark)
-            if(menu.classList.contains('hidden')) {
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                menu.classList.add('hidden');
                 icon.classList.remove('fa-xmark');
                 icon.classList.add('fa-bars');
-            } else {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa
-
+            }
+        }
+    </script>
 </body>
 </html>
