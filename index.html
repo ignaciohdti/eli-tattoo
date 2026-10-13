@@ -65,28 +65,61 @@
 </head>
 <body class="antialiased">
 
-    <nav class="fixed w-full bg-safari-bg/90 backdrop-blur-md z-50 border-b border-safari-sageLight shadow-sm">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-wild font-semibold tracking-wide text-safari-text">
-                Eli <span class="text-safari-sage">Tattoo</span>
-            </a>
-            <div class="hidden md:flex space-x-8 text-sm font-medium text-safari-text">
-                <a href="#portafolio" class="hover:text-safari-sage transition">Trabajos</a>
-                <a href="#flashes" class="hover:text-safari-sage transition">Diseños</a>
-                <a href="#estudio" class="hover:text-safari-sage transition">Estudio</a>
-                <a href="#informacion" class="hover:text-safari-sage transition">Cuidados</a>
+    <!-- Navegación con Menú Móvil -->
+    <nav class="fixed w-full z-50 border-b border-safari-sageLight shadow-sm">
+        <!-- Barra principal superior -->
+        <div class="relative bg-safari-bg/95 backdrop-blur-md z-50">
+            <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+                <!-- Logo -->
+                <a href="#" class="text-2xl font-wild font-semibold tracking-wide text-safari-text">
+                    Eli <span class="text-safari-sage">Tattoo</span>
+                </a>
+                
+                <!-- Menú Escritorio (Oculto en móviles) -->
+                <div class="hidden md:flex space-x-8 text-sm font-medium text-safari-text items-center">
+                    <a href="#portafolio" class="hover:text-safari-sage transition">Trabajos</a>
+                    <a href="#flashes" class="hover:text-safari-sage transition">Diseños</a>
+                    <a href="#estudio" class="hover:text-safari-sage transition">Estudio</a>
+                    <a href="#informacion" class="hover:text-safari-sage transition">Cuidados</a>
+                    <!-- Redes Sociales -->
+                    <div class="flex space-x-4 pl-4 border-l border-gray-300 text-xl">
+                        <a href="https://instagram.com/eli__.tattoo?mdxt=MXFpbWFxNnJkZDJxag%3D%3D" target="_blank" class="hover:text-safari-tiger transition">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@eli__.tattoo?_r=1&_t=ZS-9AWsE1wULmm" target="_blank" class="hover:text-safari-tiger transition">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Botón de Menú Móvil (Hamburguesa) -->
+                <button id="mobile-menu-button" class="md:hidden text-2xl text-safari-text focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
-            <div class="flex space-x-4 text-xl text-safari-text">
-                <a href="https://instagram.com/eli__.tattoo?mdxt=MXFpbWFxNnJkZDJxag%3D%3D" target="_blank" class="hover:text-safari-tiger transition">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://www.tiktok.com/@eli__.tattoo?_r=1&_t=ZS-9AWsE1wULmm" target="_blank" class="hover:text-safari-tiger transition">
-                    <i class="fa-brands fa-tiktok"></i>
-                </a>
+            
+            <!-- Cinta decorativa sutil de cebra en la navegación -->
+            <div class="h-1 w-full accent-zebra opacity-20"></div>
+        </div>
+
+        <!-- Panel de Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-safari-bg border-b border-safari-sageLight shadow-lg z-40">
+            <div class="flex flex-col px-4 py-6 space-y-6 text-center text-safari-text font-medium">
+                <a href="#portafolio" class="mobile-link text-lg hover:text-safari-sage transition">Trabajos Realizados</a>
+                <a href="#flashes" class="mobile-link text-lg hover:text-safari-sage transition">Diseños Disponibles</a>
+                <a href="#estudio" class="mobile-link text-lg hover:text-safari-sage transition">El Estudio</a>
+                <a href="#informacion" class="mobile-link text-lg hover:text-safari-sage transition">Cuidados y Políticas</a>
+                
+                <div class="flex justify-center space-x-8 pt-4 border-t border-gray-200 text-2xl">
+                    <a href="https://instagram.com/eli__.tattoo?mdxt=MXFpbWFxNnJkZDJxag%3D%3D" target="_blank" class="hover:text-safari-tiger transition">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@eli__.tattoo?_r=1&_t=ZS-9AWsE1wULmm" target="_blank" class="hover:text-safari-tiger transition">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                </div>
             </div>
         </div>
-        <!-- Cinta decorativa sutil de cebra en la navegación -->
-        <div class="h-1 w-full accent-zebra opacity-20"></div>
     </nav>
 
     <header class="pt-36 pb-20 px-4 text-center bg-white relative overflow-hidden">
@@ -105,13 +138,13 @@
             <h1 class="text-5xl md:text-6xl font-wild text-safari-text mb-4">
                 Eli Tattoo
             </h1>
-            <p class="text-safari-sage font-medium mb-8 text-lg tracking-wide uppercase">Arte • Fauna • Naturaleza</p>
+            <p class="text-safari-sage font-medium mb-8 text-lg tracking-wide uppercase">Puntillismo • Linea Fina • Relleno</p>
             
-            <div class="flex justify-center gap-4">
-                <a href="https://instagram.com/eli__.tattoo?mdxt=MXFpbWFxNnJkZDJxag%3D%3D" target="_blank" class="flex items-center gap-2 bg-safari-text text-white px-6 py-3 rounded-full hover:bg-safari-sage transition shadow-md">
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://instagram.com/eli__.tattoo?mdxt=MXFpbWFxNnJkZDJxag%3D%3D" target="_blank" class="flex items-center justify-center gap-2 bg-safari-text text-white px-6 py-3 rounded-full hover:bg-safari-sage transition shadow-md">
                     <i class="fa-brands fa-instagram text-xl"></i> Instagram
                 </a>
-                <a href="https://www.tiktok.com/@eli__.tattoo?_r=1&_t=ZS-9AWsE1wULmm" target="_blank" class="flex items-center gap-2 bg-white text-safari-text border border-gray-200 px-6 py-3 rounded-full hover:border-safari-text transition shadow-sm">
+                <a href="https://www.tiktok.com/@eli__.tattoo?_r=1&_t=ZS-9AWsE1wULmm" target="_blank" class="flex items-center justify-center gap-2 bg-white text-safari-text border border-gray-200 px-6 py-3 rounded-full hover:border-safari-text transition shadow-sm">
                     <i class="fa-brands fa-tiktok text-xl"></i> TikTok
                 </a>
             </div>
@@ -135,6 +168,8 @@
                 <div class="bg-white p-2 rounded-xl shadow-sm"><img src="Tatto_07.jfif" alt="Tatuaje 7" class="gallery-img rounded-lg object-cover w-full h-72"></div>
                 <div class="bg-white p-2 rounded-xl shadow-sm"><img src="Tatto_08.jfif" alt="Tatuaje 8" class="gallery-img rounded-lg object-cover w-full h-72"></div>
                 <div class="bg-white p-2 rounded-xl shadow-sm"><img src="Tatto_09.jfif" alt="Tatuaje 9" class="gallery-img rounded-lg object-cover w-full h-72"></div>
+                <div class="bg-white p-2 rounded-xl shadow-sm"><img src="Tatto_10.jfif" alt="Tatuaje 10" class="gallery-img rounded-lg object-cover w-full h-72"></div>
+                <div class="bg-white p-2 rounded-xl shadow-sm"><img src="Tatto_11.jfif" alt="Tatuaje 11" class="gallery-img rounded-lg object-cover w-full h-72"></div>
             </div>
         </div>
     </section>
@@ -154,25 +189,49 @@
                 <div class="relative group">
                     <div class="absolute inset-0 accent-zebra rounded-xl transform translate-x-2 translate-y-2 opacity-10 transition-transform group-hover:translate-x-3 group-hover:translate-y-3"></div>
                     <div class="relative bg-safari-bg p-3 border border-gray-100 rounded-xl">
-                        <img src="flash_01.jfif" alt="Flash" class="rounded-lg w-full">
+                        <img src="flash_01.jfif" alt="Flash 1" class="rounded-lg w-full">
                     </div>
                 </div>
                 <div class="relative group">
                     <div class="absolute inset-0 accent-zebra rounded-xl transform translate-x-2 translate-y-2 opacity-10 transition-transform group-hover:translate-x-3 group-hover:translate-y-3"></div>
                     <div class="relative bg-safari-bg p-3 border border-gray-100 rounded-xl">
-                        <img src="https://via.placeholder.com/300x300/FFFFFF/8F9C84?text=Flash+2" alt="Flash" class="rounded-lg w-full">
+                        <img src="flash_02.jfif" alt="Flash 2" class="rounded-lg w-full">
                     </div>
                 </div>
                 <div class="relative group">
                     <div class="absolute inset-0 accent-zebra rounded-xl transform translate-x-2 translate-y-2 opacity-10 transition-transform group-hover:translate-x-3 group-hover:translate-y-3"></div>
                     <div class="relative bg-safari-bg p-3 border border-gray-100 rounded-xl">
-                        <img src="https://via.placeholder.com/300x300/FFFFFF/8F9C84?text=Flash+3" alt="Flash" class="rounded-lg w-full">
+                        <img src="flash_03.jfif" alt="Flash 3" class="rounded-lg w-full">
                     </div>
                 </div>
                 <div class="relative group">
                     <div class="absolute inset-0 accent-zebra rounded-xl transform translate-x-2 translate-y-2 opacity-10 transition-transform group-hover:translate-x-3 group-hover:translate-y-3"></div>
                     <div class="relative bg-safari-bg p-3 border border-gray-100 rounded-xl">
-                        <img src="https://via.placeholder.com/300x300/FFFFFF/8F9C84?text=Flash+4" alt="Flash" class="rounded-lg w-full">
+                        <img src="flash_04.jfif" alt="Flash 4" class="rounded-lg w-full">
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="absolute inset-0 accent-zebra rounded-xl transform translate-x-2 translate-y-2 opacity-10 transition-transform group-hover:translate-x-3 group-hover:translate-y-3"></div>
+                    <div class="relative bg-safari-bg p-3 border border-gray-100 rounded-xl">
+                        <img src="flash_05.jfif" alt="Flash 5" class="rounded-lg w-full">
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="absolute inset-0 accent-zebra rounded-xl transform translate-x-2 translate-y-2 opacity-10 transition-transform group-hover:translate-x-3 group-hover:translate-y-3"></div>
+                    <div class="relative bg-safari-bg p-3 border border-gray-100 rounded-xl">
+                        <img src="flash_06.jfif" alt="Flash 6" class="rounded-lg w-full">
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="absolute inset-0 accent-zebra rounded-xl transform translate-x-2 translate-y-2 opacity-10 transition-transform group-hover:translate-x-3 group-hover:translate-y-3"></div>
+                    <div class="relative bg-safari-bg p-3 border border-gray-100 rounded-xl">
+                        <img src="flash_07.jfif" alt="Flash 7" class="rounded-lg w-full">
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="absolute inset-0 accent-zebra rounded-xl transform translate-x-2 translate-y-2 opacity-10 transition-transform group-hover:translate-x-3 group-hover:translate-y-3"></div>
+                    <div class="relative bg-safari-bg p-3 border border-gray-100 rounded-xl">
+                        <img src="flash_08.jfif" alt="Flash 8" class="rounded-lg w-full">
                     </div>
                 </div>
             </div>
@@ -185,9 +244,9 @@
             <h2 class="text-4xl font-wild mt-2 text-safari-text mb-10">El Estudio</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <img src="Est_01.jfif" alt="Estudio" class="rounded-2xl object-cover w-full h-64 shadow-sm">
-                <img src="https://via.placeholder.com/600x400/E3E7DF/2D3748?text=Estudio+2" alt="Estudio" class="rounded-2xl object-cover w-full h-64 shadow-sm">
-                <img src="https://via.placeholder.com/600x400/E3E7DF/2D3748?text=Estudio+3" alt="Estudio" class="rounded-2xl object-cover w-full h-64 shadow-sm lg:col-span-1 md:col-span-2">
+                <img src="Est_01.jfif" alt="Estudio 1" class="rounded-2xl object-cover w-full h-64 shadow-sm">
+                <img src="Est_02.jfif" alt="Estudio 2" class="rounded-2xl object-cover w-full h-64 shadow-sm">
+                <img src="Est_03.jfif" alt="Estudio 3" class="rounded-2xl object-cover w-full h-64 shadow-sm lg:col-span-1 md:col-span-2">
             </div>
         </div>
     </section>
@@ -291,6 +350,25 @@
         </div>
         <p class="text-gray-500 text-sm">© 2026 Eli Tattoo. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- Script para controlar el Menú Móvil -->
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        const icon = btn.querySelector('i');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        // Función para abrir/cerrar menú
+        function toggleMenu() {
+            menu.classList.toggle('hidden');
+            
+            // Cambiar icono entre Hamburguesa (bars) y Cerrar (xmark)
+            if(menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa
 
 </body>
 </html>
